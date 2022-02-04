@@ -1,0 +1,77 @@
+/*
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    int n,i;
+    char c,ch[100];
+    int count=0,con;
+    printf("enter string:");
+    gets(ch);
+    n=strlen(ch);
+    for(i=0;i<n;i++)
+    {
+        c=ch[i];
+        switch(c)
+    {
+        case 'A':
+         case 'E':
+          case 'I':
+           case 'O':
+            case 'U':
+             case 'a':
+              case 'e':
+               case 'i':
+                case 'o':
+                 case 'u':
+                 count++;
+                 con=strlen(ch)-count;
+                 break;
+                 default:printf(" %c",c);
+    }
+    }
+    printf("\nno of vowels:%d",count);
+    printf("\nno of consonants:%d",con);
+    return 0;
+}
+*/                           /*without space count*/
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    int n,i,j;
+    char c,ch[100];
+    int count=0,con=0;
+    printf("enter string:");
+    gets(ch);
+    n=strlen(ch);
+    for(i=0;i<n;i++)
+    {
+        c=ch[i];
+         if((ch[i]>='a' && ch[i]<='z') || (ch[i]>='A' && ch[i]<='Z'))
+    
+        switch(c)
+    {
+        case 'A':
+         case 'E':
+          case 'I':
+           case 'O':
+            case 'U':
+             case 'a':
+              case 'e':
+               case 'i':
+                case 'o':
+                 case 'u':
+                 count++;
+                 break;
+                 default:printf(" %c",c);
+                 con++;
+    }
+    }
+    printf("\nno of vowels:%d",count);
+    printf("\nno of consonants:%d",con);
+    return 0;
+}
+
+
+    
